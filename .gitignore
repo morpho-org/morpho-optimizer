@@ -40,6 +40,5 @@ lcov.*
 # docs
 /docs
 
-# certora
-.certora**
-emv-*-certora*
+# Certora
+.certora_internal

@@ -190,14 +190,7 @@ The report is then usable either:
 
 ## Storage seatbelt
 
-2 CI pipelines are currently running on every PR to check that the changes introduced are not modifying the storage layout of proxied smart contracts in an unsafe way:
-
-- [storage-layout.sh](./scripts/storage-layout.sh) checks that the latest foundry storage layout snapshot is identical to the committed storage layout snapshot
-- [foundry-storage-check](https://github.com/Rubilmax/foundry-storage-diff) is in test phase and will progressively replace the snapshot check
-
-In the case the storage layout snapshots checked by `storage-layout.sh` are not identical, the developer must commit the updated storage layout snapshot stored under [snapshots/](./snapshots/) by running:
-
-- `make storage-layout-generate` with the appropriate protocol parameters
+A CI pipeline [foundry-storage-check](https://github.com/Rubilmax/foundry-storage-diff) is running on every PR to check that the changes introduced are not modifying the storage layout of proxied smart contracts in an unsafe way.
 
 ---
 
